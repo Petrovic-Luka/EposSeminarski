@@ -19,8 +19,9 @@ using System.Xml.Linq;
 namespace DataAccess.Data
 {
     public static class DataHelper
+    
     {
-        private static readonly string conn = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\lukap\\source\\repos\\EposSeminarski\\DataAccess\\NotesDb.mdf;Integrated Security=True";
+        private static readonly string conn = $"Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\lukap\\source\\repos\\EposSeminarski\\DataAccess\\NotesDb.mdf;Integrated Security=True";
 
 
         public static async Task<IEnumerable<NoteModel>> NotesGetAllAsync()

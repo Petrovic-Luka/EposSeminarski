@@ -55,6 +55,11 @@ namespace NotesApi.Controllers
         {
             try
             {
+                var temp = await DataHelper.NotesGetAsync(id);
+                if (temp == null || temp.Count() < 1)
+                {
+                    throw new AppException("There are no notes with given id");
+                }
                 DataValidation.CheckData(value);
             }
             catch (AppException ex)
